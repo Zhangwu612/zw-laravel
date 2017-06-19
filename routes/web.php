@@ -71,6 +71,15 @@ Route::group(['prefix'=>'center'],function(){
 //Member\MemberController@profile 的路径是 /app/Http/Controllers/Member/MemberController.php 里的 profile 方法
 Route::get('member/profile/{uid?}',['uses'=>'Member\MemberController@profile','as'=>'member-profile']);
 
+//数据库操作演示路由
+Route::get('member/facade','Member\MemberController@facade');
+Route::get('member/insert','Member\MemberController@insert');
+Route::get('member/update','Member\MemberController@update');
+Route::get('member/delete','Member\MemberController@delete');
+Route::get('member/query', 'Member\MemberController@query');
+
+
+
 
 
 
